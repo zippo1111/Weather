@@ -17,7 +17,6 @@ struct Cache {
     func withUpdatedImage(_ image: UIImage?, for key: Int) {
         var newImages = images
         newImages[key] = image
-//        return Cache(images: newImages)
     }
 }
 
@@ -39,7 +38,6 @@ struct CacheService {
     func set(value: UIImage?, for key: Int) {
         guard let _ = get(by: key) else {
             cache.withUpdatedImage(value, for: key)
-//            return CacheService(cache: updatedCache)
             return
         }
 

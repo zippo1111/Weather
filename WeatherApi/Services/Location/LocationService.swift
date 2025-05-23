@@ -48,8 +48,6 @@ extension LocationService: CLLocationManagerDelegate {
         default:
             break
         }
-
-
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
