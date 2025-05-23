@@ -30,11 +30,16 @@ fileprivate extension WeatherViewModel {
 
         let allHours = data?.forecastdays.prefix(numberOfDays).flatMap { $0.hour }
 
-        return allHours?.compactMap {
-            HourlyWeatherViewModel(
-                hour: $0.time.dateToShortHour(),
-                conditionIcon: $0.condition.icon,
-                temperature: "\($0.temp_c)"
+        return allHours?.map { hour in
+            let iconImage = data?.icons.filter { key, _ in
+                key == hour.time_epoch
+            }.first
+
+            return HourlyWeatherViewModel(
+                hour: hour.time.dateToShortHour(),
+                conditionIcon: hour.condition.icon,
+                iconImage: iconImage?.value,
+                temperature: "\(hour.temp_c)"
             )
         }
     }
@@ -42,12 +47,16 @@ fileprivate extension WeatherViewModel {
     func getDailyModel() async -> [DailyWeatherViewModel]? {
         let data = await model.getData()
 
-        return data?.forecastdays.map {
-            DailyWeatherViewModel(
-                day: $0.date.dateToShortDay(),
-                conditionIcon: $0.day.condition.icon,
-                temperatureMin: "\($0.day.minTempCeil)",
-                temperatureMax: "\($0.day.maxTempCeil)"
+        return data?.forecastdays.map { day in
+            let iconImage = data?.icons.filter { key, _ in
+                key == day.date_epoch
+            }.first
+
+            return DailyWeatherViewModel(
+                day: day.date.dateToShortDay(),
+                conditionIcon: iconImage?.value,
+                temperatureMin: "\(day.day.minTempCeil)",
+                temperatureMax: "\(day.day.maxTempCeil)"
             )
         }
     }

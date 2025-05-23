@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import UIKit
 
 struct DailyWeatherViewModel: Hashable {
     let day: String?
-    let conditionIcon: String?
+    let conditionIcon: UIImage?
     let temperatureMin: String?
     let temperatureMax: String?
 }

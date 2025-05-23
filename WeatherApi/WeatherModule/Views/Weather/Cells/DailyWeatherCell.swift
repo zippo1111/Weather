@@ -50,8 +50,6 @@ final class DailyWeatherCell: UICollectionViewCell {
         return stack
     }()
 
-    private let spinner = UIActivityIndicatorView()
-
     override init(frame: CGRect) {
         super.init(frame: frame)
 
@@ -93,16 +91,11 @@ final class DailyWeatherCell: UICollectionViewCell {
         horizontalStackView.addArrangedSubview(minTemperature)
         horizontalStackView.addArrangedSubview(delimiter)
         horizontalStackView.addArrangedSubview(maxTemperature)
-
-        icon.addSubview(spinner)
     }
 
     private func configureConstraints() {
         horizontalStackView.snp.makeConstraints {
             $0.edges.equalToSuperview().inset(4)
-        }
-        spinner.snp.makeConstraints {
-            $0.center.equalToSuperview()
         }
     }
 
@@ -112,33 +105,6 @@ final class DailyWeatherCell: UICollectionViewCell {
         day.text = viewModelData.day
         minTemperature.text = "\(viewModelData.temperatureMin ?? "")\(Constants.celcium)"
         maxTemperature.text = "\(viewModelData.temperatureMax ?? "")\(Constants.celcium)"
-
-        guard let conditionIcon = viewModelData.conditionIcon,
-              let url = URL(string: "https://\(String(conditionIcon.dropFirst(2)))") else {
-            throw NetworkError.invalidURL
-        }
-
-        showSpinnerInImage()
-
-        Task {
-            do {
-                try await icon.loadImage(from: url)
-                await MainActor.run {
-                    hideSpinnerInImage()
-                }
-            } catch {
-                throw error
-            }
-        }
-    }
-
-    private func showSpinnerInImage() {
-        spinner.startAnimating()
-    }
-
-    private func hideSpinnerInImage() {
-        if spinner.isAnimating {
-            spinner.stopAnimating()
-        }
+        icon.image = viewModelData.conditionIcon
     }
 }

@@ -7,48 +7,176 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "ADF19515-D19E-4994-82F1-35DAC3456ADB"
+            uuid = "566E5BB6-6CF6-4C90-BB2C-C872F1EA017A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WeatherApi/WeatherModule/Views/Weather/WeatherViewController.swift"
+            filePath = "WeatherApi/WeatherModule/Views/Weather/Cells/HourlyWeatherCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "loadData()"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "setupData(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B5283C46-5741-4811-B09F-7B9ED10FD45B"
+            uuid = "1340224A-6483-4BD4-8D35-64D794559F99"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherApi/WeatherModule/Views/Weather/Cells/HourlyWeatherCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "HourlyWeatherCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "1340224A-6483-4BD4-8D35-64D794559F99 - 9aafe46433506515"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherApi.HourlyWeatherCell.configure(viewModel: Swift.Optional&lt;WeatherApi.HourlyWeatherViewModel&gt;, row: Swift.Int) throws -&gt; ()"
+                  moduleName = "WeatherApi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mangust/Documents/Apple/WeatherApi/WeatherApi/WeatherModule/Views/Weather/Cells/HourlyWeatherCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "157">
+               </Location>
+               <Location
+                  uuid = "1340224A-6483-4BD4-8D35-64D794559F99 - 9aafe46433506515"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherApi.HourlyWeatherCell.configure(viewModel: Swift.Optional&lt;WeatherApi.HourlyWeatherViewModel&gt;, row: Swift.Int) throws -&gt; ()"
+                  moduleName = "WeatherApi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mangust/Documents/Apple/WeatherApi/WeatherApi/WeatherModule/Views/Weather/Cells/HourlyWeatherCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "213">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "19FF4CBC-D61B-45C9-85F6-107DD55D0937"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WeatherApi/WeatherModule/Views/Weather/WeatherViewController.swift"
+            filePath = "WeatherApi/WeatherModule/ViewModels/WeatherViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
-            landmarkName = "loadData()"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "getHourlyModel(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7FA45BDB-4FAF-43C7-98FF-674F51B36D85"
+            uuid = "72F7011C-D9E0-41FA-A892-B89C608CFA2B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WeatherApi/WeatherModule/Views/Weather/WeatherViewController.swift"
+            filePath = "WeatherApi/WeatherModule/ViewModels/WeatherViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "loadData()"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "getHourlyModel(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5F2D1051-C366-4587-9E9C-3D112216DF9E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherApi/WeatherModule/ViewModels/WeatherViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "getHourlyModel(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3E4C5A04-2547-457F-AE6C-33A5A74DEEA7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherApi/WeatherModule/Models/WeatherModels.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "loadIcons(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "59E83490-2D49-4081-B31B-4A2F6629DB20"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherApi/WeatherModule/Models/WeatherModels.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "getData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "463130FB-4401-4F67-AE35-1D7AFA728514"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherApi/WeatherModule/Models/WeatherModels.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "getData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1D7B7875-0DC5-45B9-9C5C-851B3C604580"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherApi/WeatherModule/Models/WeatherModels.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "loadIcons(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -36,13 +36,11 @@ final class HourlyWeatherCell: UICollectionViewCell {
     private let stackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
-        stack.spacing = 8
+        stack.spacing = 4
         stack.alignment = .fill
-        stack.distribution = .fill
+        stack.distribution = .fillProportionally
         return stack
     }()
-
-    private let spinner = UIActivityIndicatorView()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -83,16 +81,11 @@ final class HourlyWeatherCell: UICollectionViewCell {
         stackView.addArrangedSubview(label)
         stackView.addArrangedSubview(icon)
         stackView.addArrangedSubview(boldLabel)
-
-        icon.addSubview(spinner)
     }
 
     private func configureConstraints() {
         stackView.snp.makeConstraints {
             $0.edges.equalToSuperview()
-        }
-        spinner.snp.makeConstraints {
-            $0.center.equalToSuperview()
         }
     }
 
@@ -101,32 +94,6 @@ final class HourlyWeatherCell: UICollectionViewCell {
 
         label.text = viewModelData.hour
         boldLabel.text = "\(viewModelData.temperature ?? "")\(Constants.celcium)"
-
-        showSpinnerInImage()
-
-        guard let url = URL(string: "https://\(String(viewModelData.conditionIcon.dropFirst(2)))") else {
-            throw NetworkError.invalidURL
-        }
-
-        Task {
-            do {
-                try await icon.loadImage(from: url)
-                await MainActor.run {
-                    hideSpinnerInImage()
-                }
-            } catch {
-                throw error
-            }
-        }
-    }
-
-    private func showSpinnerInImage() {
-        spinner.startAnimating()
-    }
-
-    private func hideSpinnerInImage() {
-        if spinner.isAnimating {
-            spinner.stopAnimating()
-        }
+        icon.image = viewModelData.iconImage
     }
 }
